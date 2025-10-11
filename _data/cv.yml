@@ -2,96 +2,109 @@
   type: map
   contents:
     - name: Full Name
-      value: Albert Einstein
-    - name: Date of Birth
-      value: 14th March 1879
-    - name: Languages
-      value: English, German
+      value: Yuyang Wu
+    - name: Email
+      value: yuyangwu@andrew.cmu.edu
+    - name: Phone
+      value: 412-478-1680
+    - name: Location
+      value: Pittsburgh, PA, USA
+    - name: Affiliation
+      value: Carnegie Mellon University
 
 - title: Education
   type: time_table
   contents:
-    - title: PhD
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1905
+    - title: M.S. in Automated Science
+      institution: Carnegie Mellon University, School of Computer Science
+      year: 2024 - 2026
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Federal teaching diploma
-      institution: Eidgenössische Technische Hochschule, Zurich, Switzerland
-      year: 1900
+        - "GPA: 3.70/4.00"
+        - "Courses: Machine Learning, Active Learning, Bioinformatics, Automated Experimentation"
+    - title: B.S. in Zhang Zhidong Class - Advanced Class
+      institution: Huazhong Agricultural University
+      year: 2020 - 2024
       description:
-        - Description 1.
-        - Description 2.
+        - "GPA: 88.9/100"
+        - "Courses: Deep Learning & Neural Network, Database Systems, Data Structures & Algorithms"
+    - title: Visiting Scholar
+      institution: National University of Singapore, School of Computing
+      year: May 2023 - Jul 2023
+      description:
+        - "Courses: Deep Learning, Neural Networks, Robotics"
 
-- title: Experience
+- title: Research Experience
   type: time_table
   contents:
-    - title: Professor of Theoretical Physics
-      institution: Institute for Advanced Study, Princeton University
-      year: 1933 - 1955
+    - title: Large-Scale Multi-Property Quantum Chemistry Dataset
+      institution: Carnegie Mellon University
+      year: Apr 2025 - Present
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Visiting Professor
-      institution: California Institute of Technology, Pasadena, California, US
-      year: 1933
+        - Created a multi-million-entry dataset including energies, forces, dipoles, quadrupoles
+        - Benchmarked SchNet, PaiNN, E2GNN, Equiformer for molecular property prediction
+        - Preparing publication and open dataset release
+
+    - title: Improving Trustworthiness of Large Language Models in Chemistry
+      institution: Carnegie Mellon University
+      year: Jan 2025 - Jul 2025
       description:
-        - Description 1.
-        - Description 2.
+        - Designed and led MolErr2Fix benchmark for LLM trustworthiness
+        - Built dataset of 1,193 expert-annotated errors across 525 molecules
+        - Evaluated GPT-4o, Claude-3.7, Gemini-1.5, DeepSeek V3, ChemLLM
+        - Proposed new metrics for semantic accuracy and explanation quality
+        - Led collaboration between Isayev and CLAW groups
 
-    - title: Director
-      institution: Kaiser Wilhelm Institute for Physics, Berlin, Germany.
-      year: 1917-1933
-
-    - title: Professor of Theoretical Physics
-      institution: Karl-Ferdinand University, Prague, Czechoslovakia
-      year: 1911 - 1917
+    - title: Multi-View Representation Learning for Cancer Gene Identification (IMVRL-GCN)
+      institution: Huazhong Agricultural University
+      year: Oct 2023 - May 2024
       description:
+        - Integrated multi-omics (genomic, transcriptomic, epigenomic, PPI) data
+        - Identified 74 high-confidence candidate cancer genes
+        - Contributed to analysis, validation, and manuscript
 
-    - title: Associate Professor of Theoretical Physics
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1909 - 1911
+    - title: "HimGNN: Hierarchical Molecular Graph Neural Networks"
+      institution: Huazhong Agricultural University
+      year: Feb 2023 - Jun 2023
+      description:
+        - Designed hierarchical GNN with atom- and motif-level features
+        - Developed Transformer-based local augmentation module
+        - Improved performance across 8 benchmark datasets
 
-- title: Open Source Projects
+- title: Projects
   type: time_table
   contents:
-    - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
-      year: 2015-now
-      description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
+    - title: "CHEM-AL: Active Learning for Molecular Property Prediction"
+      institution: Carnegie Mellon University
+      year: Feb 2025 - Apr 2025
+      description:
+        - Built active learning framework with uncertainty, QBC, and diversity sampling
+        - Implemented Naïve Bayes and MLP (with MC Dropout) on MoleculeNet datasets
+        - Achieved 50% reduction in labeling requirements versus random sampling
 
-- title: Honors and Awards
-  type: time_table
-  contents:
-    - year: 1921
-      items:
-        - Nobel Prize in Physics
-        - Matteucci Medal
-    - year: 2029
-      items:
-        - Max Planck Medal
+    - title: Computational Prediction of Protein–Protein Interactions (PPI)
+      institution: Carnegie Mellon University
+      year: Feb 2025 - Apr 2025
+      description:
+        - Designed deep learning pipelines for SHS27K benchmark (16,912 interactions)
+        - Developed ProBERT-BiGRU-Attention and Transformer-based models
+        - Achieved 83% accuracy and AUC 0.91
+        - Built GNN capturing structural context for unseen proteins
 
-- title: Academic Interests
-  type: nested_list
-  contents:
-    - title: Topic 1.
-      items:
-        - Description 1.
-        - Description 2.
-    - title: Topic 2.
-      items:
-        - Description 1.
-        - Description 2.
-
-- title: Other Interests
+- title: Publications
   type: list
   contents:
-    - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
+    - "<b>Yuyang Wu</b>, Jinhui Ye, Shuhao Zhang, Lu Dai, Yonatan Bisk, Olexandr Isayev*. <i>MolErr2Fix: Benchmarking LLM Trustworthiness in Chemistry via Modular Error Detection, Localization, Explanation, and Revision.</i> <b>EMNLP 2025</b> (Poster)."
+    - "Shen Han#, Haitao Fu#, <b>Yuyang Wu</b>, et al. <i>HimGNN: Hierarchical Molecular Graph Representation Learning Framework for Property Prediction.</i> <b>Briefings in Bioinformatics</b>, 2023. DOI: 10.1093/bib/bbad305."
+    - "Jianye Yang#, Haitao Fu#, Feiyang Xue, Menglu Li, <b>Yuyang Wu</b>, et al. <i>Multi-View Representation Learning for Identification of Novel Cancer Genes and Their Causative Biological Mechanisms.</i> <b>Briefings in Bioinformatics</b>, 2024. DOI: 10.1093/bib/bbad418."
+
+- title: Technical Skills
+  type: map
+  contents:
+    - name: Programming Languages
+      value: Python, Golang, C++
+    - name: Systems & Tools
+      value: Linux/Unix, Bash, MySQL, Git
+    - name: Machine Learning
+      value: PyTorch, TensorFlow, Scikit-learn
+    - name: Data Science
+      value: NumPy, Pandas, Matplotlib
