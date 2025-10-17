@@ -1,0 +1,20 @@
+- title: "PhenoCitrus — Automated Citrus Fruit Phenotyping"
+  role: "Co-Leader"
+  period: "2024.01–2025.05"
+  summary: "Device + segmentation pipeline; 6 semantic models & YOLO variants; 3D fruits via Gaussian Splatting; 4 traits r>0.90."
+  tags: [YOLOv8, Segmentation, 3DGS]
+  weight: 10
+
+- title: "High-Throughput Root Phenomics for Tea"
+  role: "Principal Leader"
+  period: "2022.04–2024.06"
+  summary: "627 resequenced genomes; SNP catalogue & GWAS on metabolites; ResNet-34 for automatic leaf phenotyping (81.5%)."
+  tags: [GWAS, ResNet-34, SNP]
+  weight: 20
+
+- title: "Temperature-Driven Regulation of Ascorbic Acid in Lettuce"
+  role: "Co-author"
+  period: "2023.03–2024.05"
+  summary: "15/35°C increase ascorbic acid by 121.7%/90.5%; 4 key pathways + 4 candidates via RNA-seq."
+  tags: [Transcriptomics, Metabolism]
+  weight: 30
