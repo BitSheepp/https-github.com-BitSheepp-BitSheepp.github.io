@@ -1,3 +1,24 @@
-<div class="publications">
-  {% bibliography --group_by none --query @*[selected=true]* %}
-</div>
+{%- comment -%}
+Zero-plugin selected papers partial.
+Renders from `page.selected_papers` defined in the page's front matter.
+Each item supports: title, link, authors, venue, year, note.
+{%- endcomment -%}
+
+{%- if page.selected_papers and page.selected_papers.size > 0 -%}
+<h2>Selected Publications</h2>
+<ol class="selected-pubs">
+  {%- for p in page.selected_papers -%}
+  <li>
+    {%- if p.link -%}
+      <a href="{{ p.link }}">{{ p.title }}</a>
+    {%- else -%}
+      {{ p.title }}
+    {%- endif -%}
+    {%- if p.authors %} <span class="authors">{{ p.authors }}</span>{% endif -%}
+    {%- if p.venue %} <em>{{ p.venue }}</em>{% endif -%}
+    {%- if p.year %} ({{ p.year }}){% endif -%}
+    {%- if p.note %} — <span class="note">{{ p.note }}</span>{% endif -%}
+  </li>
+  {%- endfor -%}
+</ol>
+{%- endif -%}
