@@ -1,16 +1,22 @@
 ---
-layout: default
 title: Projects
 permalink: /projects/
+layout: default
 ---
 
-# Projects
+<link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
 
-This page is under construction. 🚧
-
-<!--
-If you want a list later, either:
-1) Re-enable a projects collection in _config.yml, and create files in _projects/, or
-2) Maintain a manual list here, or
-3) Use a data file like _data/projects.yml and loop over it (no sort on null).
--->
+<div class="wrapper">
+  <h2>Projects</h2>
+  <div class="grid">
+    {% assign items = site.data.projects | sort: 'weight' %}
+    {% for p in items %}
+      <div class="card">
+        <h3>{{ p.title }}</h3>
+        <div class="muted">{{ p.role }} · {{ p.period }}</div>
+        {% if p.tags %}<div class="badges">{% for t in p.tags %}<span class="badge">{{ t }}</span>{% endfor %}</div>{% endif %}
+        <p>{{ p.summary }}</p>
+      </div>
+    {% endfor %}
+  </div>
+</div>
