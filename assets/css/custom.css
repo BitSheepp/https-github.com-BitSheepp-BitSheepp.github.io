@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
+
 /* 简洁的卡片、美化标题、间距 */
 :root { --maxw: 980px; }
 .wrapper { max-width: var(--maxw); margin: 0 auto; padding: 1rem; }
