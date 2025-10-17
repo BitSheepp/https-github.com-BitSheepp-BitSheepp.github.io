@@ -1,110 +1,47 @@
-- title: General Information
-  type: map
-  contents:
-    - name: Full Name
-      value: Yuyang Wu
-    - name: Email
-      value: yuyangwu@andrew.cmu.edu
-    - name: Phone
-      value: 412-478-1680
-    - name: Location
-      value: Pittsburgh, PA, USA
-    - name: Affiliation
-      value: Carnegie Mellon University
+education:
+  - school: "Huazhong Agricultural University"
+    degree: "M.Sc. · Fruit Tree Breeding & Genomics"
+    period: "2024.09 – Present"
+    place: "Wuhan, China"
+    notes: "Direct-entry master’s program; year-1 coursework in progress"
+  - school: "Huazhong Agricultural University"
+    degree: "B.Sc. in Agronomy (GPA 3.61/4.00)"
+    period: "2020.09 – 2024.06"
+    place: "Wuhan, China"
+    notes: "Core: Python(96), Probability(95), Linear Algebra(91), Smart Agri Data(94), Genetics(90), Microbiology(91), Ecology(93)"
 
-- title: Education
-  type: time_table
-  contents:
-    - title: M.S. in Automated Science
-      institution: Carnegie Mellon University, School of Computer Science
-      year: 2024 - 2026
-      description:
-        - "GPA: 3.70/4.00"
-        - "Courses: Machine Learning, Active Learning, Bioinformatics, Automated Experimentation"
-    - title: B.S. in Zhang Zhidong Class - Advanced Class
-      institution: Huazhong Agricultural University
-      year: 2020 - 2024
-      description:
-        - "GPA: 88.9/100"
-        - "Courses: Deep Learning & Neural Network, Database Systems, Data Structures & Algorithms"
-    - title: Visiting Scholar
-      institution: National University of Singapore, School of Computing
-      year: May 2023 - Jul 2023
-      description:
-        - "Courses: Deep Learning, Neural Networks, Robotics"
+projects_selected:
+  - title: "High-Throughput Root Phenomics for Tea"
+    role: "Principal Leader"
+    period: "2022.04 – 2024.06"
+    bullets:
+      - "Analyzed 627 resequenced genomes to build high-confidence SNP catalogue and GWAS of secondary metabolites."
+      - "Built a PyTorch ResNet-34 model for automatic leaf phenotyping, 81.5% accuracy."
+    tags: [GWAS, ResNet-34, SNP]
+  - title: "PhenoCitrus: Automated Citrus Fruit Phenotyping"
+    role: "Co-Leader"
+    period: "2024.01 – 2025.05"
+    bullets:
+      - "Integrated device + segmentation pipeline; benchmarked 6 semantic models and YOLO variants on 240+ images."
+      - "3D fruits via Gaussian Splatting; 4 traits reached Pearson r > 0.90 vs. manual."
+    tags: [YOLOv8, Segmentation, 3DGS]
+  - title: "Temperature-Driven Regulation of Ascorbic Acid in Lettuce"
+    role: "Co-author"
+    period: "2023.03 – 2024.05"
+    bullets:
+      - "15°C / 35°C raised ascorbic acid by 121.7% / 90.5%."
+      - "RNA-seq: 4 pathways + 4 candidate genes; manuscript under review."
+    tags: [Transcriptomics, Metabolism]
 
-- title: Research Experience
-  type: time_table
-  contents:
-    - title: Large-Scale Multi-Property Quantum Chemistry Dataset
-      institution: Carnegie Mellon University
-      year: Apr 2025 - Present
-      description:
-        - Created a multi-million-entry dataset including energies, forces, dipoles, quadrupoles
-        - Benchmarked SchNet, PaiNN, E2GNN, Equiformer for molecular property prediction
-        - Preparing publication and open dataset release
+skills:
+  - group: "Programming · Data"
+    items: [Python, R, Bash, PyTorch, scikit-learn, OpenCV, YOLOv8, 3D Gaussian Splatting]
+  - group: "Bioinformatics"
+    items: [EMMAX, TASSEL, PLINK, VCFtools, bcftools, DESeq2, featureCounts, GCTA]
+  - group: "Tools"
+    items: [Git/GitHub, Docker, Conda, LaTeX, Illustrator, OriginPro]
 
-    - title: Improving Trustworthiness of Large Language Models in Chemistry
-      institution: Carnegie Mellon University
-      year: Jan 2025 - Jul 2025
-      description:
-        - Designed and led MolErr2Fix benchmark for LLM trustworthiness
-        - Built dataset of 1,193 expert-annotated errors across 525 molecules
-        - Evaluated GPT-4o, Claude-3.7, Gemini-1.5, DeepSeek V3, ChemLLM
-        - Proposed new metrics for semantic accuracy and explanation quality
-        - Led collaboration between Isayev and CLAW groups
-
-    - title: Multi-View Representation Learning for Cancer Gene Identification (IMVRL-GCN)
-      institution: Huazhong Agricultural University
-      year: Oct 2023 - May 2024
-      description:
-        - Integrated multi-omics (genomic, transcriptomic, epigenomic, PPI) data
-        - Identified 74 high-confidence candidate cancer genes
-        - Contributed to analysis, validation, and manuscript
-
-    - title: "HimGNN: Hierarchical Molecular Graph Neural Networks"
-      institution: Huazhong Agricultural University
-      year: Feb 2023 - Jun 2023
-      description:
-        - Designed hierarchical GNN with atom- and motif-level features
-        - Developed Transformer-based local augmentation module
-        - Improved performance across 8 benchmark datasets
-
-- title: Projects
-  type: time_table
-  contents:
-    - title: "CHEM-AL: Active Learning for Molecular Property Prediction"
-      institution: Carnegie Mellon University
-      year: Feb 2025 - Apr 2025
-      description:
-        - Built active learning framework with uncertainty, QBC, and diversity sampling
-        - Implemented Naïve Bayes and MLP (with MC Dropout) on MoleculeNet datasets
-        - Achieved 50% reduction in labeling requirements versus random sampling
-
-    - title: Computational Prediction of Protein–Protein Interactions (PPI)
-      institution: Carnegie Mellon University
-      year: Feb 2025 - Apr 2025
-      description:
-        - Designed deep learning pipelines for SHS27K benchmark (16,912 interactions)
-        - Developed ProBERT-BiGRU-Attention and Transformer-based models
-        - Achieved 83% accuracy and AUC 0.91
-        - Built GNN capturing structural context for unseen proteins
-
-- title: Publications
-  type: list
-  contents:
-    - "<b>Yuyang Wu</b>, Jinhui Ye, Shuhao Zhang, Lu Dai, Yonatan Bisk, Olexandr Isayev*. <i>MolErr2Fix: Benchmarking LLM Trustworthiness in Chemistry via Modular Error Detection, Localization, Explanation, and Revision.</i> <b>EMNLP 2025</b> (Poster)."
-    - "Shen Han#, Haitao Fu#, <b>Yuyang Wu</b>, et al. <i>HimGNN: Hierarchical Molecular Graph Representation Learning Framework for Property Prediction.</i> <b>Briefings in Bioinformatics</b>, 2023. DOI: 10.1093/bib/bbad305."
-    - "Jianye Yang#, Haitao Fu#, Feiyang Xue, Menglu Li, <b>Yuyang Wu</b>, et al. <i>Multi-View Representation Learning for Identification of Novel Cancer Genes and Their Causative Biological Mechanisms.</i> <b>Briefings in Bioinformatics</b>, 2024. DOI: 10.1093/bib/bbad418."
-
-- title: Technical Skills
-  type: map
-  contents:
-    - name: Programming Languages
-      value: Python, Golang, C++
-    - name: Systems & Tools
-      value: Linux/Unix, Bash, MySQL, Git
-    - name: Machine Learning
-      value: PyTorch, TensorFlow, Scikit-learn
-    - name: Data Science
-      value: NumPy, Pandas, Matplotlib
+awards:
+  - "Outstanding Student Award (2022.10) · HZAU"
+  - "First Prize, ‘Hundred Students Forum’ Campus Competition (2021.12)"
+  - "Third Prize, Challenge Cup (Hubei Province) (2023.05)"
