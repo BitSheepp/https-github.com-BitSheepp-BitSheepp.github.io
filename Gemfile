@@ -1,38 +1,35 @@
-source 'https://rubygems.org'
+source "https://rubygems.org"
 
-gem 'jekyll'
+# 固定 Jekyll 4 系（GitHub 容器默认是 Jekyll 3，不要混用）
+gem "jekyll", "~> 4.3.3"
+gem "webrick"  # 本地 serve 用
 
-# Core plugins that directly affect site building
+# —— 插件（尽量选择纯 Ruby 插件）——
 group :jekyll_plugins do
-    gem 'jekyll-archives-v2'
-    gem 'jekyll-email-protect'
-    gem 'jekyll-feed'
-    gem 'jekyll-get-json'
-    gem 'jekyll-imagemagick'
-    gem 'jekyll-jupyter-notebook'
-    gem 'jekyll-link-attributes'
-    gem 'jekyll-minifier'
-    gem 'jekyll-paginate-v2'
-    gem 'jekyll-regex-replace'
-    gem 'jekyll-scholar'
-    gem 'jekyll-sitemap'
-    gem 'jekyll-tabs'
-    gem 'jekyll-terser', :git => "https://github.com/RobertoJBeltran/jekyll-terser.git"
-    gem 'jekyll-toc'
-    gem 'jekyll-twitter-plugin'
-    gem 'jemoji'
+  gem "jekyll-feed"
+  gem "jekyll-sitemap"
+  gem "jekyll-seo-tag"
+  gem "jemoji"
 
-    gem 'classifier-reborn'  # used for content categorization during the build
+  # 常用增强
+  gem "jekyll-paginate-v2"
+  gem "jekyll-toc"
+  gem "jekyll-archives-v2"
+  gem "jekyll-link-attributes"
+  gem "jekyll-regex-replace"
+  gem "jekyll-tabs"
+  gem "jekyll-scholar"        # 若不需要学术引用，先注释掉
+  gem "jekyll-minifier"       # 纯 Ruby 压缩器，替代 terser（JS 压缩会弱些，但更稳）
+  # gem "jekyll-terser"       # 如需更强 JS 压缩，后续再加；先跑通为主
+  gem "jekyll-twitter-plugin"
 end
 
-# Gems for development or external data fetching (outside :jekyll_plugins)
+# 其他 Ruby 依赖（不参与 jekyll 插件加载）
 group :other_plugins do
-    gem 'css_parser'
-    gem 'feedjira'
-    gem 'httparty'
-    gem 'observer'       # used by jekyll-scholar
-    gem 'ostruct'        # used by jekyll-twitter-plugin
-    # gem 'terser'         # used by jekyll-terser
-    # gem 'unicode_utils' -- should be already installed by jekyll
-    # gem 'webrick' -- should be already installed by jekyll
+  gem "css_parser"
+  gem "feedjira"
+  gem "httparty"
+  gem "classifier-reborn"
+  gem "observer"
+  gem "ostruct"
 end
