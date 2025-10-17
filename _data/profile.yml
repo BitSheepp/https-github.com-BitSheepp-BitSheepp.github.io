@@ -1,0 +1,18 @@
+name: "Chunyang He"
+subtitle: "AI × Bioinformatics · Multimodal · Citrus/Plant Genomics"
+location: "Huazhong Agricultural University · Wuhan, China"
+email: "cyhe@webmail.hzau.edu.cn"
+phone: "+86-176-3376-2997"
+
+about: >
+  I focus on integrating AI with bioinformatics for multimodal biological data, knowledge graphs,
+  and deep learning to decipher genetic regulatory mechanisms of complex traits, with applications
+  in precision breeding and healthcare.
+
+badges:
+  - GWAS
+  - PyTorch/ResNet
+  - YOLOv8 · CV
+  - 3D Gaussian Splatting
+  - RNA-seq · DESeq2
+  - VCFtools/PLINK
