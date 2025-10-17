@@ -1,26 +1,97 @@
-<link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
+/* ------------------------------
+   Base
+------------------------------ */
+:root{
+  --maxw: 960px;
+  --radius: 16px;
+  --shadow: 0 6px 24px rgba(0,0,0,.06);
+  --muted: #6b7280;
+}
 
-/* 简洁的卡片、美化标题、间距 */
-:root { --maxw: 980px; }
-.wrapper { max-width: var(--maxw); margin: 0 auto; padding: 1rem; }
+html{-webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;}
+body{line-height:1.6;}
 
-.hero { margin: 1rem 0 1.25rem; }
-.hero h1 { font-size: 2.2rem; margin: .25rem 0; }
-.hero .subtitle { color:#555; margin:.2rem 0 .5rem; }
-.hero .meta { color:#666; font-size:.95rem; }
+/* 容器 */
+.wrapper{
+  max-width: var(--maxw);
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
 
-.grid { display:grid; gap:16px; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); }
-.card { border:1px solid #e5e7eb; border-radius:12px; padding:16px; background:#fff; }
-.card h3{ margin:.25rem 0 .4rem; font-size:1.05rem;}
-.card .muted{ color:#667085; font-size:.92rem; }
-.badges { display:flex; flex-wrap:wrap; gap:6px; margin:.35rem 0; }
-.badge { border:1px solid #e5e7eb; padding:2px 8px; border-radius:999px; font-size:.85rem; }
-.kv { margin:.25rem 0; }
-.kv b{ display:inline-block; min-width:120px; color:#444; }
+/* 小标题说明文字 */
+.muted{color:var(--muted); font-size:.95rem}
 
-.section { margin: 28px 0; }
-.section h2 { font-size:1.5rem; border-bottom:1px solid #eee; padding-bottom:.3rem; margin-bottom:.6rem; }
+/* ------------------------------
+   修复主题导航的圆点 & 布局
+------------------------------ */
+.site-header ul,
+.site-header li{
+  list-style:none !important;
+  margin:0 !important;
+  padding:0 !important;
+}
+.site-header .site-nav ul{
+  display:flex;
+  gap:1rem;
+  align-items:center;
+}
+.site-header .site-nav a{
+  text-decoration:none;
+}
 
-/* 表格(简历课程/技能) */
-table { width:100%; border-collapse:collapse; }
-th, td { border-bottom:1px solid #eee; padding:8px 4px; vertical-align:top; }
+/* 顶部 hero */
+.hero h1{font-size:2.4rem; margin:.5rem 0 0;}
+.hero .subtitle{font-size:1.05rem; margin:.5rem 0 0.25rem; color:#111;}
+.hero .meta{color:var(--muted);}
+
+/* ------------------------------
+   Section、Grid、卡片
+------------------------------ */
+.section{margin:2.25rem 0;}
+.section>h2{margin-bottom:1rem;}
+
+.grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px,1fr));
+  gap:1rem;
+}
+
+.card{
+  background:#fff;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding:1rem 1.1rem;
+  border:1px solid #eef1f4;
+}
+.card h3{margin:.2rem 0 .35rem 0; font-size:1.05rem;}
+
+/* ------------------------------
+   徽章
+------------------------------ */
+.badges{display:flex; flex-wrap:wrap; gap:.5rem; margin-top:.4rem;}
+.badge{
+  display:inline-block;
+  padding:.22rem .55rem;
+  border-radius:999px;
+  border:1px solid #e5e7eb;
+  background:#f8fafc;
+  font-size:.85rem;
+  text-decoration:none;
+  color:#111;
+}
+
+/* 简历里键值对行 */
+.kv{margin-top:.35rem;}
+.kv b{display:inline-block; min-width:70px; color:#111;}
+
+/* 列表在卡片里更紧凑 */
+.card ul{margin:.4rem 0 0 1.1rem;}
+.card li{margin:.25rem 0;}
+
+/* ------------------------------
+   自适应
+------------------------------ */
+@media (max-width:520px){
+  .hero h1{font-size:2rem;}
+  .wrapper{margin:1.25rem auto;}
+}
