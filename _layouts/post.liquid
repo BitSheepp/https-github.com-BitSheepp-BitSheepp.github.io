@@ -36,9 +36,7 @@ layout: default
           {% else %}
             <i class="fa-solid fa-hashtag fa-sm"></i> {{ tag }}
           {% endif %}
-          {% unless forloop.last %}
-            &nbsp;
-          {% endunless %}
+          {% unless forloop.last %}&nbsp;{% endunless %}
         {% endfor %}
       {% endif %}
 
@@ -50,9 +48,7 @@ layout: default
           {% else %}
             <i class="fa-solid fa-tag fa-sm"></i> {{ category }}
           {% endif %}
-          {% unless forloop.last %}
-            &nbsp;
-          {% endunless %}
+          {% unless forloop.last %}&nbsp;{% endunless %}
         {% endfor %}
       {% endif %}
     </p>
@@ -60,14 +56,13 @@ layout: default
 
   <article class="post-content">
     {%- comment -%}
-      NOTE:
-      GitHub Pages（Jekyll 3.10）环境不支持第三方插件标签 `{% toc %}`。
-      如果需要目录（TOC），请在文章 Markdown 内容中添加：
-      
+      GitHub Pages (Jekyll 3.10) does not load third-party tags like `{% toc %}` or `{% bibliography %}`.
+      If you want a TOC, put this in the Markdown of the post itself:
+
       * 目录
       {:toc}
-      
-      并在 _config.yml 中确保：
+
+      And ensure in _config.yml:
       markdown: kramdown
       kramdown:
         toc_levels: 1..3
@@ -82,12 +77,10 @@ layout: default
     {% include citation.liquid %}
   {% endif %}
 
-  {% if page.related_publications %}
-    <h2>References</h2>
-    <div class="publications">
-      {% bibliography --group_by none --cited_in_order %}
-    </div>
-  {% endif %}
+  {%- comment -%}
+    Removed the "related_publications" block which used `{% bibliography %}` from jekyll-scholar,
+    since GitHub Pages default build doesn't support it.
+  {%- endcomment -%}
 
   {% if site.related_blog_posts and site.related_blog_posts.enabled %}
     {% if page.related_posts == null or page.related_posts %}
